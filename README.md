@@ -6,9 +6,10 @@ present in the raid.
 ## Disclaimer
 
 This is a fork of [enemymarkers](https://gitlab.com/flir063-spt/enemymarkers) made for the sole purpose of scavenger runs
+
 Changes:
-Always active as a scav
-Never marks PMCs
+- Always active as a scav
+- Never marks PMCs
 
 ## Licensing
 
