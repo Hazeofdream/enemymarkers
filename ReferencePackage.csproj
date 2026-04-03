@@ -1,0 +1,66 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <PackageId>EnemyMarkers.SPT.References</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>flir063-spt</Authors>
+    <Description>Private reference assemblies for Enemy Markers SPT4 mod development. Contains all SPT, EFT, and Unity assemblies needed for CI builds.</Description>
+    <PackageProjectUrl>https://gitlab.com/flir063-spt/enemymarkers</PackageProjectUrl>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <SuppressDependenciesWhenPacking>true</SuppressDependenciesWhenPacking>
+
+    <!-- Disable compilation - this project only packages DLLs, doesn't build code -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultItems>false</EnableDefaultItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="refs/spt-reflection.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/spt-reflection.dll</PackagePath>
+    </Content>
+    <Content Include="refs/hollowed.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/Assembly-CSharp.dll</PackagePath>
+    </Content>
+    <Content Include="refs/BepInEx.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/BepInEx.dll</PackagePath>
+    </Content>
+    <Content Include="refs/Comfort.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/Comfort.dll</PackagePath>
+    </Content>
+    <Content Include="refs/UnityEngine.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/UnityEngine.dll</PackagePath>
+    </Content>
+    <Content Include="refs/UnityEngine.UI.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/UnityEngine.UI.dll</PackagePath>
+    </Content>
+    <Content Include="refs/UnityEngine.UIModule.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/UnityEngine.UIModule.dll</PackagePath>
+    </Content>
+    <Content Include="refs/UnityEngine.CoreModule.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/UnityEngine.CoreModule.dll</PackagePath>
+    </Content>
+    <Content Include="refs/UnityEngine.TextRenderingModule.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/UnityEngine.TextRenderingModule.dll</PackagePath>
+    </Content>
+    <Content Include="refs/UnityEngine.PhysicsModule.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/UnityEngine.PhysicsModule.dll</PackagePath>
+    </Content>
+    <Content Include="refs/DissonanceVoip.dll">
+      <Pack>true</Pack>
+      <PackagePath>lib/net472/DissonanceVoip.dll</PackagePath>
+    </Content>
+  </ItemGroup>
+
+</Project>
