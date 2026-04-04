@@ -12,7 +12,7 @@ namespace flir.enemymarkers
     [BepInDependency("com.SPT.core", "4.0.0")]
     public class Plugin : BaseUnityPlugin
     {
-        public const string Version = "1.3.0";
+        public const string Version = "1.3.1";
 
         private const string General = "2. General";
         internal static ConfigEntry<int> ScreenVisibilityRadius;
@@ -38,11 +38,7 @@ namespace flir.enemymarkers
 
         private const string MarkerColors = "4. Marker Colors";
         public static ConfigEntry<Color> PlayerGroupColor;
-        public static ConfigEntry<Color> PmcBearColor;
-        public static ConfigEntry<Color> PmcUsecColor;
         public static ConfigEntry<Color> ScavColor;
-        public static ConfigEntry<Color> GuardColor;
-        public static ConfigEntry<Color> BossColor;
 
         private void Awake()
         {
@@ -85,12 +81,8 @@ namespace flir.enemymarkers
             LightIntensity = Config.Bind(LightSettings, "Light intensity", 2.0f);
             LightRange = Config.Bind(LightSettings, "Light range (m)", 5.0f);
 
-            PlayerGroupColor = Config.Bind(MarkerColors, "1 Player group color", new Color(0, 1, 0));
-            PmcBearColor = Config.Bind(MarkerColors, "2 Bear marker color", new Color(1, 1, 1));
-            PmcUsecColor = Config.Bind(MarkerColors, "3 Usec marker color", new Color(1, 1, 0));
-            ScavColor = Config.Bind(MarkerColors, "4 Scav marker color", new Color(1, 0.45f, 0.007f));
-            GuardColor = Config.Bind(MarkerColors, "5 Guard marker color", new Color(0.93f, 0.51f, 0.93f));
-            BossColor = Config.Bind(MarkerColors, "6 Boss marker color", new Color(1, 0, 0));
+            // Only remaining colors
+            ScavColor = Config.Bind(MarkerColors, "Scav marker color", new Color(1, 0.45f, 0.007f));
 
             new NewGamePatch().Enable();
         }

@@ -20,27 +20,9 @@ namespace flir.enemymarkers
         {
             var color = Color.clear;
 
-            if (p.IsGroupedWithMainPlayer())
-            {
-                color = Plugin.PlayerGroupColor.Value;
-            }
-            else if (p.IsTrackedBoss())
-            {
-                color = Plugin.BossColor.Value;
-            }
-            else if (p.IsTrackedGuard())
-            {
-                color = Plugin.GuardColor.Value;
-            }
-            else if (p.IsScav())
+            if (p.IsScav())
             {
                 color = Plugin.ScavColor.Value;
-            }
-            else if (p.IsPMC())
-            {
-                color = p.Side == EPlayerSide.Bear
-                    ? Plugin.PmcBearColor.Value
-                    : Plugin.PmcUsecColor.Value;
             }
             return color;
         }
