@@ -24,7 +24,8 @@ namespace flir.enemymarkers
             WildSpawnType.followerBoarClose1,
             WildSpawnType.followerBoarClose2,
             WildSpawnType.followerKolontayAssault,
-            WildSpawnType.followerKolontaySecurity
+            WildSpawnType.followerKolontaySecurity,
+            WildSpawnType.pmcBot
         };
 
         private static readonly HashSet<WildSpawnType> TrackedBosses = new HashSet<WildSpawnType>
